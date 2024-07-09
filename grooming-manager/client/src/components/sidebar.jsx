@@ -39,6 +39,17 @@ function Sidebar({ onDateChange, toggleAppointmentBooking }) {
         <li className="menu-item">
           <Calendar onDateChange={handleDateChange} />
         </li>
+        <li className="menu-item has-submenu">
+          <a href="#">Manage</a>
+          <ul className="submenu">
+            <li className="submenu-item">
+              <Link to="/prices">Pets</Link>
+            </li>
+            <li className="submenu-item">
+              <Link to="/prices">Clients</Link>
+            </li>
+          </ul>
+        </li>
         <li className="menu-item">
           <span className="menu-link" /*  onClick={openModal} */>Logout</span>
         </li>
