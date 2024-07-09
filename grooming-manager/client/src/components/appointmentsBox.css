@@ -1,0 +1,37 @@
+.appointment-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: solid 1px black;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
+
+.appointments-box h1 {
+  font-size: medium;
+  margin-top: 0;
+}
+
+.appointments-box h2 {
+  margin-top: 0;
+}
+
+.appointments-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.appointments-box li {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.appointments-box button {
+  margin-left: 5px;
+}
+
+.appointments-box button:hover {
+  cursor: pointer;
+}

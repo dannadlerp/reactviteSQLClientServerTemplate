@@ -1,0 +1,55 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 100%;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border: 1px solid grey;
+  box-shadow: 0 0 10px grey;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  align-items: center;
+}
+
+.menu-item {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  color: black;
+  border-bottom: 1px solid grey;
+}
+
+.menu-item:hover {
+  background-color: lightgrey;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.has-submenu .submenu {
+  display: none;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+.has-submenu:hover .menu-item {
+  background-color: lightblue;
+}
+
+.submenu-item {
+  margin-left: 20px;
+}
+.logout-item {
+  position: fixed;
+  bottom: 0;
+  align-items: center;
+}
