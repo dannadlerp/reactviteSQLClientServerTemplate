@@ -5,6 +5,7 @@ import Sidebar from "../components/sidebar";
 import Modal from "../components/modal";
 import BookingAppointments from "../components/bookingAppointments";
 import ClientProfile from "../components/clientProfile";
+import ClientManager from "../components/clientManager";
 
 const MainApp = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -18,11 +19,16 @@ const MainApp = () => {
     setShowAppointments((prevShowAppointments) => !prevShowAppointments);
   };
 
+  const toggleClientManager = () => {
+    setShowClientManager((prevShowClientManager) => !prevShowClientManager);
+  };
+
   return (
     <div>
       <Sidebar
         onDateChange={handleDateChange}
         toggleAppointmentBooking={toggleAppointmentBooking}
+        toggleClientManager={toggleClientManager}
       />
 
       <div>

@@ -6,6 +6,7 @@ import Login from "./components/login";
 import Register from "./components/register";
 import MainApp from "./pages/MainApp";
 import BookingAppointments from "./components/bookingAppointments";
+import ClientManager from "./components/clientManager";
 import "./App.css";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="appointments" element={<BookingAppointments />} />
+          <Route path="clients" element={<BookingAppointments />} />
         </Routes>
       </div>
     </React.StrictMode>

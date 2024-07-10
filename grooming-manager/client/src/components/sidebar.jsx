@@ -3,7 +3,11 @@ import "./sidebar.css";
 import { Link } from "react-router-dom";
 import Calendar from "./calendar";
 
-function Sidebar({ onDateChange, toggleAppointmentBooking }) {
+function Sidebar({
+  onDateChange,
+  toggleAppointmentBooking,
+  toggleClientManager,
+}) {
   const [selectedDate, setSelectedDate] = useState(new Date());
 
   const handleDateChange = (date) => {
@@ -15,9 +19,9 @@ function Sidebar({ onDateChange, toggleAppointmentBooking }) {
     <div className="sidebar">
       <ul className="menu">
         <li className="menu-item">
-          <Link to="/profile" style={{ color: "lightgrey" }}>
-            Groomer Profile
-          </Link>
+          {/*           <Link to="/profile" style={{ color: "lightgrey" }}>
+           */}{" "}
+          <span style={{ color: "lightgrey" }}>Groomer Profile</span>
         </li>
         <li className="menu-item" onClick={toggleAppointmentBooking}>
           <span>Appointments</span>
@@ -28,11 +32,13 @@ function Sidebar({ onDateChange, toggleAppointmentBooking }) {
         <li className="menu-item has-submenu">
           <a href="#">Groom/Prices</a>
           <ul className="submenu">
-            <li className="submenu-item">
-              <Link to="/grooming-services">Grooming Services</Link>
+            <li className="submenu-item" onClick={toggleAppointmentBooking}>
+              {/* <Link to="/grooming-services"> */}
+              <span style={{ color: "lightgrey" }}>Grooming Services</span>
             </li>
-            <li className="submenu-item">
-              <Link to="/prices">Prices</Link>
+            <li className="submenu-item" onClick={toggleAppointmentBooking}>
+              {/* <Link to="/prices"> */}
+              <span style={{ color: "lightgrey" }}>Prices</span>
             </li>
           </ul>
         </li>
@@ -42,11 +48,13 @@ function Sidebar({ onDateChange, toggleAppointmentBooking }) {
         <li className="menu-item has-submenu">
           <a href="#">Manage</a>
           <ul className="submenu">
-            <li className="submenu-item">
-              <Link to="/prices">Pets</Link>
+            <li className="submenu-item" onClick={toggleAppointmentBooking}>
+              {/* <Link to="/pets">Pets</Link> */}
+              <span>Pets</span>
             </li>
-            <li className="submenu-item">
-              <Link to="/prices">Clients</Link>
+            <li className="submenu-item" onClick={toggleAppointmentBooking}>
+              {/* <Link to="/clients">Clients</Link> */}
+              <span>Clients</span>
             </li>
           </ul>
         </li>
